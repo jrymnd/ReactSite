@@ -1,4 +1,4 @@
-import { renderIntoDocument } from 'react-dom/test-utils';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 
 const Footer = () => {
@@ -6,9 +6,25 @@ const Footer = () => {
         <footer className='site-footer'>
             <Container>
                 <Row>
-                    <Col xs={{ size: 4, offset: 1 }} sm='2'><h5>this will be site navigation!</h5></Col>
+                    <Col xs={{ size: 4, offset: 1 }} sm='2'>
+                        <h5>Links</h5>
+                        <ul className='list-unstyled'>
+                            <li>
+                                <Link to='/'>Home</Link>
+                            </li>
+                            <li>
+                                <Link to='/directory'>Directory</Link>
+                            </li>
+                            <li>
+                                <Link to='/about'>About</Link>
+                            </li>
+                            <li>
+                                <Link to='/contact'>Contact</Link>
+                            </li>
+                        </ul>
+                    </Col>
                     <Col xs='6' sm='3' className='text-center'>
-                    <h5>Social</h5>
+                        <h5>Social</h5>
                         <a
                             className='btn btn-social-icon btn-instagram'
                             href='http://instagram.com/'
@@ -35,7 +51,7 @@ const Footer = () => {
                         </a>
                     </Col>
                     <Col sm='4' className='text-center'>
-                    <a
+                        <a
                             role='button'
                             className='btn btn-link'
                             href='tel:+12065551234'
